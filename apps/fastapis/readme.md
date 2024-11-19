@@ -36,9 +36,9 @@ cd app/fastapi
 3. **Set Environment Variables**:
    Create a `.env` file in the project root and add the following:
    ```env
-   SUPABASE_SUPAFAST_URL = "https://xsaynpaaqkjpecyyircd.supabase.co"
+   <!-- SUPABASE_SUPAFAST_URL = "https://xsaynpaaqkjpecyyircd.supabase.co"
   SUPABASE_SUPAFAST_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhzYXlucGFhcWtqcGVjeXlpcmNkIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTczMTkyNjgwMiwiZXhwIjoyMDQ3NTAyODAyfQ.P9qNqFCWB0N1qZv-Tc8qAPMz4jO-Asgq_0vIbVFsV24"
-  JWT_SECRET="SHASHWAT"
+  JWT_SECRET="SHASHWAT" -->
    ```
 
 4. **Start the Development Server**:
