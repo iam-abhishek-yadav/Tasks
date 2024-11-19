@@ -2,8 +2,8 @@ import { FaList, FaColumns, FaUser, FaCog } from 'react-icons/fa'
 
 export const SIDEBAR_ITEMS = [
   {
-    title: 'Tasks List',
-    url: '/tasks-list',
+    title: 'Issues',
+    url: '/issues',
     icon: FaList,
   },
   {

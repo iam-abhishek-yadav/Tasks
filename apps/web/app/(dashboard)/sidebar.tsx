@@ -5,7 +5,6 @@ import {
   SidebarContent,
   SidebarGroup,
   SidebarGroupContent,
-  SidebarGroupLabel,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
@@ -23,9 +22,7 @@ export function AppSidebar() {
     <Sidebar>
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel className="text-2xl">Tasks</SidebarGroupLabel>
-
-          <div className="flex items-center space-x-2 mt-2 mb-4 px-4">
+          <div className="flex items-center space-x-2 mt-12 mb-4 px-4">
             <Image
               src={profilePic}
               alt="Profile"
