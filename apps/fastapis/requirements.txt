@@ -2,7 +2,11 @@ fastapi
 uvicorn
 sqlalchemy
 passlib
-bcrypt
+bcrypt==3.2.0
 python-jose
 python-multipart
 supabase
+python-dotenv
+pyjwt
+passlib[bcrypt]
+psycopg2-binary
