@@ -53,7 +53,7 @@ const AuthPage: React.FC = () => {
       console.log(formData)
       setSubmitting(false)
       resetFormData()
-      router.push('/tasks-list')
+      router.push('/issues')
     }, 2000)
   }
 
