@@ -8,15 +8,22 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
+  SidebarSeparator,
 } from '@/components/ui/sidebar'
+
+import { Button } from '@/components/ui/button'
+import { FaSun, FaMoon } from 'react-icons/fa'
 import Image from 'next/image'
-import { SIDEBAR_ITEMS } from './constants'
+import { useTheme } from 'next-themes'
 import Link from 'next/link'
+import CreateTaskButton from '@/components/shared/create-task-button'
+import { SIDEBAR_ITEMS } from './constants'
 
 export function AppSidebar() {
   const username = 'John Doe'
   const profilePic = 'https://via.placeholder.com/150'
   const currentPath = usePathname()
+  const { theme, setTheme } = useTheme()
 
   return (
     <Sidebar>
@@ -31,9 +38,21 @@ export function AppSidebar() {
               className="w-10 h-10 rounded-full object-cover"
             />
             <span className="font-semibold">{username}</span>
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+            >
+              <FaSun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+              <FaMoon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+            </Button>
           </div>
 
-          <hr className="border-t border-gray-300 mb-4" />
+          <SidebarSeparator className="mb-2 mx-0" />
+
+          <CreateTaskButton />
+
+          <SidebarSeparator className="my-2 mx-0" />
 
           <SidebarGroupContent>
             <SidebarMenu>
@@ -47,7 +66,7 @@ export function AppSidebar() {
                       className={`${
                         isActive
                           ? 'bg-gray-800 text-white hover:bg-gray-800 hover:text-white'
-                          : 'text-gray-700 '
+                          : 'text-gray-700 dark:text-gray-400'
                       }`}
                     >
                       <Link href={item.url}>
